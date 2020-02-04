@@ -13,12 +13,8 @@ import './Main.css'
 function App() {
   const  [ devs , setDevs] = useState([]);
   
- 
-
-
   async function handleAddDev(data){
    
-
    const reponse = await api.post('/devs', data) 
   
    setDevs([...devs, reponse.data]);
